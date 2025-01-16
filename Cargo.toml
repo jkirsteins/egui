@@ -53,6 +53,8 @@ panic = "abort" # This leads to better optimizations and smaller binaries (and i
 # Optimize all dependencies even in debug builds (does not affect workspace packages):
 opt-level = 2
 
+[patch.crates-io]
+winit = { git = "https://github.com/jkirsteins/winit", branch = "janiskirsteins/noblur" }
 
 [workspace.dependencies]
 emath = { version = "0.30.0", path = "crates/emath", default-features = false }
@@ -101,7 +103,7 @@ web-sys = "0.3.70"
 web-time = "1.1.0" # Timekeeping for native and web
 wgpu = { version = "23.0.0", default-features = false }
 windows-sys = "0.59"
-winit = { version = "0.30.5", default-features = false }
+winit = { git = "https://github.com/jkirsteins/winit", branch = "janiskirsteins/noblur" }
 
 [workspace.lints.rust]
 unsafe_code = "deny"
